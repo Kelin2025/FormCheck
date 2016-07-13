@@ -58,4 +58,5 @@ $form->check('Логин','login')
 $form->type('login')
 ```
 Проверка по распространенным регулярным выражениям.
-*Примечание*: список всех доступных регулярных выражений можно посмотреть [здесь](https://github.com/Kelin2025/FormCheck/blob/master/regexps.md)
+
+**Примечание**: список всех доступных регулярных выражений можно посмотреть [здесь](https://github.com/Kelin2025/FormCheck/blob/master/regexps.md)
