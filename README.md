@@ -1,6 +1,6 @@
-# О FormCheck
+# FormCheck
+## Что это?
 FormCheck - простой PHP-класс для проверки корректности введенных данных.
-
 Небольшой пример проверки $_POST-данных из формы:
 ```php
 $form = new FormCheck($_POST);
