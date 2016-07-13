@@ -3,25 +3,16 @@ FormCheck - простой PHP-класс для проверки коррект
 
 Небольшой пример проверки $_POST-данных из формы:
 
-  `$form = new FormCheck($_POST);
-  
-  $form
-  
-    ->check('Логин','login')->type('login')->min(3)->max(50)
-    
-    ->check('Пароль','password')->type('password')->min(3)->max(50)
-    
-    ->check('Повтор пароля','password2')->equal('password')
-    
-    ->check('Почтовый ящик','email')->type('mail')->max(100)
-    
-    ->check('Имя','name')->type('name')->min(2)->max(50)
-    
-    ->check('Фамилия','surname')->type('name')->min(2)->max(50)
-    
-    ->check('Отчество','lastname')->type('name')->min(2)->max(50);
-    
-  print_r($form->errors);`
+    $form = new FormCheck($_POST);
+    $form
+     ->check('Логин','login')->type('login')->min(3)->max(50)
+     ->check('Пароль','password')->type('password')->min(3)->max(50)
+     ->check('Повтор пароля','password2')->equal('password')
+     ->check('Почтовый ящик','email')->type('mail')->max(100)
+      ->check('Имя','name')->type('name')->min(2)->max(50)
+     ->check('Фамилия','surname')->type('name')->min(2)->max(50)
+     ->check('Отчество','lastname')->type('name')->min(2)->max(50);
+    print_r($form->errors);`
 Результат:
   array (size=7)
   'login' => 
