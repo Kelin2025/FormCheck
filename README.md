@@ -6,16 +6,16 @@ FormCheck - простой PHP-класс для проверки коррект
 ```php
 $form = new FormCheck($_POST);
 $form
-  ->check('Логин','login')->type('login')->min(3)->max(50)
-  ->check('Пароль','password')->type('password')->min(3)->max(50)
-  ->check('Повтор пароля','password2')->equal('password')
-  ->check('Почтовый ящик','email')->type('mail')->max(100)
-  ->check('Имя','name')->type('name')->min(2)->max(50)
-  ->check('Фамилия','surname')->type('name')->min(2)->max(50)
-  ->check('Отчество','lastname')->type('name')->min(2)->max(50)
-  ->check('Дополнительное поле','test')->custom(function($self,$value){
-   if($value == '111') $self->add_error('равно 111');
-  });
+    ->check('Логин','login')->type('login')->min(3)->max(50)
+    ->check('Пароль','password')->type('password')->min(3)->max(50)
+    ->check('Повтор пароля','password2')->equal('password')
+    ->check('Почтовый ящик','email')->type('mail')->max(100)
+    ->check('Имя','name')->type('name')->min(2)->max(50)
+    ->check('Фамилия','surname')->type('name')->min(2)->max(50)
+    ->check('Отчество','lastname')->type('name')->min(2)->max(50)
+    ->check('Дополнительное поле','test')->custom(function($self,$value){
+     if($value == '111') $self->add_error('равно 111');
+    });
 print_r($form->get_errors());`
 ```
 Результат:
