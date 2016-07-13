@@ -1,7 +1,9 @@
 # О FormCheck
 FormCheck - простой PHP-класс для проверки корректности введенных данных.
+
 Небольшой пример проверки $_POST-данных из формы:
-  $form = new FormCheck($_POST);
+
+  `$form = new FormCheck($_POST);
   $form
     ->check('Логин','login')->type('login')->min(3)->max(50)
     ->check('Пароль','password')->type('password')->min(3)->max(50)
@@ -10,7 +12,7 @@ FormCheck - простой PHP-класс для проверки коррект
     ->check('Имя','name')->type('name')->min(2)->max(50)
     ->check('Фамилия','surname')->type('name')->min(2)->max(50)
     ->check('Отчество','lastname')->type('name')->min(2)->max(50);
-  print_r($form->errors);
+  print_r($form->errors);`
 Результат:
   array (size=7)
   'login' => 
