@@ -14,7 +14,7 @@ $form
     ->check('Фамилия','surname')->type('name')->min(2)->max(50)
     ->check('Отчество','lastname')->type('name')->min(2)->max(50)
     ->check('Дополнительное поле','test')->custom(function($self,$value){
-     if($value == '111') $self->add_error('равно 111');
+      if($value == '111') $self->add_error('равно 111');
     });
 print_r($form->get_errors());`
 ```
