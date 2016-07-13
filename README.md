@@ -15,7 +15,7 @@ $form
  ->check('Дополнительное поле','test')->custom(function($self,$value){
    if($value == '111') $self->add_error('равно 111');
  });
-print_r($form->get_errors());`
+print_r($form->get_errors());
 ```
 Результат:
 ```php
