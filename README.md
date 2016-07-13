@@ -146,3 +146,16 @@ $form->get_errors(true)
   5 => 'Поле "Тест" равно 111'
 ]
 ```
+## Проверки
+```php
+$form->has_key('login')
+```
+Проверка на наличие элемента `login` в массиве `$form->input`
+```php
+$form->is_empty()
+```
+Проверка наличия элементов в `$form->input` (Проверка `count()` и `is_array()`)
+```php
+$form->has_errors()
+```
+Проверка наличия ошибок
